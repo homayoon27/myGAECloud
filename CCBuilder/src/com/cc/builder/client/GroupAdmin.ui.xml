@@ -1,0 +1,50 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.titles {
+		font-weight: bold;
+		color:black;
+		}
+		.normalText {
+		color:blue;
+		}
+		.buttons {
+		font-weight: bold;
+		color:green;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Grid ui:field="grid">
+			<g:row styleName="{style.titles}">
+				<g:customCell>
+					<g:Label>Group Admin</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:Label>Current Date</g:Label>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:cell>
+					<div>@admin</div>
+				</g:cell>
+				<g:cell>
+					<div>@date</div>
+				</g:cell>
+			</g:row>
+		</g:Grid>
+		
+		<div>
+			<g:Label styleName="{style.titles}" ui:field="gnameLabel" />
+			<g:TextBox styleName="{style.normalText}" ui:field="gnameTBox" />
+		</div>				
+		
+		<div>
+			<g:Label styleName="{style.titles}" ui:field="gdescLabel" />
+			<g:TextBox  styleName="{style.normalText}" ui:field="gdescTBox" />
+		</div>				
+													
+		<g:Button styleName="{style.buttons}" ui:field="button" />
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 
